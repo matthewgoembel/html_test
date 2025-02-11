@@ -50,7 +50,7 @@ const Website = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
-              <img src="/components/ccg.png" alt="CCG Logo" className="h-8 w-8" />
+              <img src="/assets/ccg.png" alt="CCG Logo" className="h-8 w-8" />
               <span className="text-white text-xl font-bold">Cool Cyber Games</span>
             </div>
             <div className="flex items-center space-x-6">
