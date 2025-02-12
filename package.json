@@ -1,0 +1,14 @@
+# Add to package.json
+"homepage": "https://matthewgoembel.github.io/test_website"
+
+# Install gh-pages
+npm install --save-dev gh-pages
+
+# Add to package.json scripts
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+
+# Deploy
+npm run deploy
