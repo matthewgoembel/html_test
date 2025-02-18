@@ -17,7 +17,7 @@
                     <span class="logo-text">Cool Cyber Games</span>
                 </div>
                 <div class="nav-buttons">
-                    <button class="nav-button active" data-page="home">
+                    <button class="nav-button" data-page="home">
                         <i data-lucide="home"></i>
                         <span>Home</span>
                     </button>
@@ -47,64 +47,138 @@
 
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 py-8">
-        <div class="grid-layout">
-            <!-- Left Column - Daily Challenges -->
-            <div class="challenge-column">
-                <div class="panel">
-                    <h2 class="panel-title">
-                        <i data-lucide="play"></i> Daily Challenges
-                    </h2>
-                    <div class="challenges-container">
-                        <!-- Challenges will be populated by JavaScript -->
+        <!-- Home Page Content -->
+        <div id="home-page" class="page-content">
+            <div class="grid-layout">
+                <!-- Left Column - Daily Challenges -->
+                <div class="challenge-column">
+                    <div class="panel">
+                        <h2 class="panel-title">
+                            <i data-lucide="play"></i> Daily Challenges
+                        </h2>
+                        <div class="challenges-container">
+                            <!-- Challenges will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Column - Welcome Section -->
+                <div class="welcome-column">
+                    <div class="welcome-content">
+                        <h1 class="welcome-title">
+                            Welcome to 
+                            <span class="gradient-text animate-pulse">Cool Cyber Games</span>
+                        </h1>
+                        <p class="welcome-description">
+                            Embark on an epic journey through our cybersecurity challenges. 
+                            Learn, compete, and become a master of digital defense through 
+                            interactive gameplay and real-world scenarios.
+                        </p>
+                        <button class="start-button animate-bounce">
+                            Start Here
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column - Leaderboard -->
+                <div class="leaderboard-column">
+                    <div class="panel">
+                        <h2 class="panel-title">
+                            <i data-lucide="trophy"></i> Leaderboard
+                        </h2>
+                        <div class="leaderboard-container">
+                            <!-- Leaderboard will be populated by JavaScript -->
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Middle Column - Welcome Section -->
-            <div class="welcome-column">
-                <div class="welcome-content">
-                    <h1 class="welcome-title">
-                        Welcome to 
-                        <span class="gradient-text animate-pulse">Cool Cyber Games</span>
-                    </h1>
-                    <p class="welcome-description">
-                        Embark on an epic journey through our cybersecurity challenges. 
-                        Learn, compete, and become a master of digital defense through 
-                        interactive gameplay and real-world scenarios.
-                    </p>
-                    <button class="start-button animate-bounce">
-                        Start Here
+            <!-- Game Gallery Slider -->
+            <div class="game-gallery">
+                <h2 class="gallery-title">Featured Games</h2>
+                <div class="gallery-container">
+                    <div class="gallery-scroll">
+                        <!-- Games will be populated by JavaScript -->
+                    </div>
+                    <button class="gallery-nav prev">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <button class="gallery-nav next">
+                        <i data-lucide="chevron-right"></i>
                     </button>
                 </div>
             </div>
+        </div>
 
-            <!-- Right Column - Leaderboard -->
-            <div class="leaderboard-column">
-                <div class="panel">
-                    <h2 class="panel-title">
-                        <i data-lucide="trophy"></i> Leaderboard
-                    </h2>
-                    <div class="leaderboard-container">
-                        <!-- Leaderboard will be populated by JavaScript -->
+        <!-- Games Page Content -->
+        <div id="games-page" class="page-content hidden">
+            <div class="grid-layout">
+                <!-- Left Column - Daily Challenges -->
+                <div class="challenge-column">
+                    <div class="panel">
+                        <h2 class="panel-title">
+                            <i data-lucide="play"></i> Daily Challenges
+                        </h2>
+                        <div class="challenges-container">
+                            <!-- Challenges will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Column - Games Grid -->
+                <div class="games-content">
+                    <!-- Filter Bar -->
+                    <div class="filter-bar">
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">Difficulty</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                            <select class="filter-select">
+                                <option value="">Age Range</option>
+                                <option value="kids">Kids (7-12)</option>
+                                <option value="teen">Teen (13-17)</option>
+                                <option value="adult">Adult (18+)</option>
+                            </select>
+                            <select class="filter-select">
+                                <option value="">Topic</option>
+                                <option value="network">Network Security</option>
+                                <option value="crypto">Cryptography</option>
+                                <option value="malware">Malware Analysis</option>
+                                <option value="web">Web Security</option>
+                            </select>
+                        </div>
+                        <div class="search-bar">
+                            <i data-lucide="search"></i>
+                            <input type="text" placeholder="Search games...">
+                        </div>
+                    </div>
+
+                    <!-- Games Grid -->
+                    <div class="games-grid">
+                        <!-- Games will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Right Column - Leaderboard -->
+                <div class="leaderboard-column">
+                    <div class="panel">
+                        <h2 class="panel-title">
+                            <i data-lucide="trophy"></i> Leaderboard
+                        </h2>
+                        <div class="leaderboard-container">
+                            <!-- Leaderboard will be populated by JavaScript -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Game Gallery Slider -->
-        <div class="game-gallery">
-            <h2 class="gallery-title">Featured Games</h2>
-            <div class="gallery-container">
-                <div class="gallery-scroll">
-                    <!-- Games will be populated by JavaScript -->
-                </div>
-                <button class="gallery-nav prev">
-                    <i data-lucide="chevron-left"></i>
-                </button>
-                <button class="gallery-nav next">
-                    <i data-lucide="chevron-right"></i>
-                </button>
-            </div>
+        <!-- Dashboard Page Content -->
+        <div id="dashboard-page" class="page-content hidden">
+            <!-- Dashboard content will be added later -->
         </div>
     </main>
 
