@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool Cyber Games</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-gray-900">
@@ -13,26 +13,30 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="nav-container">
                 <div class="logo-container">
-                    <img src="ccg.png" alt="CCG Logo" class="logo">
+                    <img src="/assets/ccg.png" alt="CCG Logo" class="logo">
                     <span class="logo-text">Cool Cyber Games</span>
                 </div>
                 <div class="nav-buttons">
-                    <button class="nav-button" data-page="home">
+                    <a href="/" class="nav-button active">
                         <i data-lucide="home"></i>
                         <span>Home</span>
-                    </button>
-                    <button class="nav-button" data-page="games">
+                    </a>
+                    <a href="/games/" class="nav-button">
                         <i data-lucide="play"></i>
                         <span>Games</span>
-                    </button>
-                    <button class="nav-button" data-page="dashboard">
-                        <i data-lucide="monitor"></i>
-                        <span>Dashboard</span>
-                    </button>
+                    </a>
+                    <a href="/about/index.html" class="nav-button">
+                        <i data-lucide="info"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="/contact/index.html" class="nav-button">
+                        <i data-lucide="mail"></i>
+                        <span>Contact</span>
+                    </a>
                     <div class="icon-buttons">
-                        <button class="icon-button">
-                            <i data-lucide="bell"></i>
-                        </button>
+                        <a href="/api/test" class="icon-button" id="test-api">
+                            <i data-lucide="activity"></i>
+                        </a>
                         <button class="icon-button">
                             <i data-lucide="user"></i>
                         </button>
@@ -47,7 +51,6 @@
 
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 py-8">
-        <!-- Home Page Content -->
         <div id="home-page" class="page-content">
             <div class="grid-layout">
                 <!-- Left Column - Daily Challenges -->
@@ -70,13 +73,12 @@
                             <span class="gradient-text animate-pulse">Cool Cyber Games</span>
                         </h1>
                         <p class="welcome-description">
-                            Embark on an epic journey through our cybersecurity challenges. 
-                            Learn, compete, and become a master of digital defense through 
-                            interactive gameplay and real-world scenarios.
+                            Interactive games & puzzles to learn cybersecurity!
                         </p>
-                        <button class="start-button animate-bounce">
-                            Start Here
-                        </button>
+                        <a href="/games/" class="start-button animate-bounce">
+                            Choose a Game
+                        </a>
+                        <div id="api-result" class="mt-4 text-gray-300"></div>
                     </div>
                 </div>
 
@@ -92,97 +94,11 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Game Gallery Slider -->
-            <div class="game-gallery">
-                <h2 class="gallery-title">Featured Games</h2>
-                <div class="gallery-container">
-                    <div class="gallery-scroll">
-                        <!-- Games will be populated by JavaScript -->
-                    </div>
-                    <button class="gallery-nav prev">
-                        <i data-lucide="chevron-left"></i>
-                    </button>
-                    <button class="gallery-nav next">
-                        <i data-lucide="chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Games Page Content -->
-        <div id="games-page" class="page-content hidden">
-            <div class="grid-layout">
-                <!-- Left Column - Daily Challenges -->
-                <div class="challenge-column">
-                    <div class="panel">
-                        <h2 class="panel-title">
-                            <i data-lucide="play"></i> Daily Challenges
-                        </h2>
-                        <div class="challenges-container">
-                            <!-- Challenges will be populated by JavaScript -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Middle Column - Games Grid -->
-                <div class="games-content">
-                    <!-- Filter Bar -->
-                    <div class="filter-bar">
-                        <div class="filter-group">
-                            <select class="filter-select">
-                                <option value="">Difficulty</option>
-                                <option value="easy">Easy</option>
-                                <option value="medium">Medium</option>
-                                <option value="hard">Hard</option>
-                            </select>
-                            <select class="filter-select">
-                                <option value="">Age Range</option>
-                                <option value="kids">Kids (7-12)</option>
-                                <option value="teen">Teen (13-17)</option>
-                                <option value="adult">Adult (18+)</option>
-                            </select>
-                            <select class="filter-select">
-                                <option value="">Topic</option>
-                                <option value="network">Network Security</option>
-                                <option value="crypto">Cryptography</option>
-                                <option value="malware">Malware Analysis</option>
-                                <option value="web">Web Security</option>
-                            </select>
-                        </div>
-                        <div class="search-bar">
-                            <i data-lucide="search"></i>
-                            <input type="text" placeholder="Search games...">
-                        </div>
-                    </div>
-
-                    <!-- Games Grid -->
-                    <div class="games-grid">
-                        <!-- Games will be populated by JavaScript -->
-                    </div>
-                </div>
-
-                <!-- Right Column - Leaderboard -->
-                <div class="leaderboard-column">
-                    <div class="panel">
-                        <h2 class="panel-title">
-                            <i data-lucide="trophy"></i> Leaderboard
-                        </h2>
-                        <div class="leaderboard-container">
-                            <!-- Leaderboard will be populated by JavaScript -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dashboard Page Content -->
-        <div id="dashboard-page" class="page-content hidden">
-            <!-- Dashboard content will be added later -->
         </div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
+
