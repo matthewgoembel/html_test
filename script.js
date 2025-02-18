@@ -17,9 +17,36 @@ const dailyChallenges = [
 ];
 
 const games = [
-    { title: "Malware Maze", image: "/api/placeholder/300/200", difficulty: "Hard" },
-    { title: "Crypto Crusader", image: "/api/placeholder/300/200", difficulty: "Medium" },
-    { title: "Network Ninja", image: "/api/placeholder/300/200", difficulty: "Easy" },
-    { title: "Password Protector", image: "/api/placeholder/300/200", difficulty: "Medium" },
-    { title: "Security Sleuth", image: "/api/placeholder/300/200", difficulty: "Hard" },
-    { title: "Firewall Fighter", image: "/api/placeholder/300/200", difficulty:
+    { title: "Malware Maze", image: "/api/placeholder/300/200", difficulty: "Hard", url: "#" },
+    { title: "Crypto Crusader", image: "/api/placeholder/300/200", difficulty: "Medium", url: "#" },
+    { title: "Network Ninja", image: "/api/placeholder/300/200", difficulty: "Easy", url: "#" },
+    { title: "Password Protector", image: "/api/placeholder/300/200", difficulty: "Medium", url: "#" },
+    { title: "Security Sleuth", image: "/api/placeholder/300/200", difficulty: "Hard", url: "#" },
+    { title: "Firewall Fighter", image: "/api/placeholder/300/200", difficulty: "Medium", url: "#" },
+    { title: "Data Defender", image: "/api/placeholder/300/200", difficulty: "Easy", url: "#" },
+    { title: "Hack Hunter", image: "/api/placeholder/300/200", difficulty: "Hard", url: "#" },
+    { title: "Binary Battler", image: "/api/placeholder/300/200", difficulty: "Medium", url: "#" },
+];
+
+// Navigation
+const navButtons = document.querySelectorAll('.nav-button');
+const pages = document.querySelectorAll('.page-content');
+
+navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const pageId = button.dataset.page;
+        
+        // Update active button
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Show selected page
+        pages.forEach(page => {
+            if (page.id === `${pageId}-page`) {
+                page.classList.remove('hidden');
+            } else {
+                page.classList.add('hidden');
+            }
+        });
+    });
+});
