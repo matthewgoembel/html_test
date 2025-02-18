@@ -1,58 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    loadLeaderboard();
-    loadChallenges();
-    loadGames();
-});
+// Initialize Lucide icons
+lucide.createIcons();
 
-function changePage(pageId) {
-    document.querySelectorAll('.page').forEach(page => page.classList.add('hidden'));
-    document.getElementById(pageId).classList.remove('hidden');
-}
+// Data
+const leaderboardData = [
+    { rank: 1, name: "CyberMaster", points: 2500, badge: "🏆" },
+    { rank: 2, name: "ByteHunter", points: 2350, badge: "🥈" },
+    { rank: 3, name: "NetWarrior", points: 2200, badge: "🥉" },
+    { rank: 4, name: "CodeNinja", points: 2100, badge: "⭐" },
+    { rank: 5, name: "DataGuard", points: 2000, badge: "⭐" },
+];
 
-function loadLeaderboard() {
-    const leaderboard = [
-        { name: "CyberMaster", points: 2500 },
-        { name: "ByteHunter", points: 2350 },
-        { name: "NetWarrior", points: 2200 },
-        { name: "CodeNinja", points: 2100 },
-        { name: "DataGuard", points: 2000 }
-    ];
+const dailyChallenges = [
+    { title: "Malware Maze", difficulty: "Hard", reward: 500, icon: "🎮" },
+    { title: "Phishing Defense", difficulty: "Medium", reward: 300, icon: "🛡️" },
+    { title: "Crypto Challenge", difficulty: "Easy", reward: 200, icon: "🔐" },
+];
 
-    const leaderboardList = document.getElementById("leaderboard-list");
-    leaderboard.forEach(player => {
-        let li = document.createElement("li");
-        li.textContent = `${player.name} - ${player.points} pts`;
-        leaderboardList.appendChild(li);
-    });
-}
-
-function loadChallenges() {
-    const challenges = [
-        { title: "Malware Maze", difficulty: "Hard", reward: 500 },
-        { title: "Phishing Defense", difficulty: "Medium", reward: 300 },
-        { title: "Crypto Challenge", difficulty: "Easy", reward: 200 }
-    ];
-
-    const challengeList = document.getElementById("challenge-list");
-    challenges.forEach(challenge => {
-        let li = document.createElement("li");
-        li.textContent = `${challenge.title} - ${challenge.difficulty} - Reward: ${challenge.reward}`;
-        challengeList.appendChild(li);
-    });
-}
-
-function loadGames() {
-    const games = [
-        { title: "Malware Maze", image: "assets/game1.jpg" },
-        { title: "Crypto Crusader", image: "assets/game2.jpg" },
-        { title: "Network Ninja", image: "assets/game3.jpg" }
-    ];
-
-    const gameGallery = document.getElementById("game-gallery");
-    games.forEach(game => {
-        let div = document.createElement("div");
-        div.className = "game-item";
-        div.innerHTML = `<img src="${game.image}" alt="${game.title}"><p>${game.title}</p>`;
-        gameGallery.appendChild(div);
-    });
-}
+const games = [
+    { title: "Malware Maze", image: "/api/placeholder/300/200", difficulty: "Hard" },
+    { title: "Crypto Crusader", image: "/api/placeholder/300/200", difficulty: "Medium" },
+    { title: "Network Ninja", image: "/api/placeholder/300/200", difficulty: "Easy" },
+    { title: "Password Protector", image: "/api/placeholder/300/200", difficulty: "Medium" },
+    { title: "Security Sleuth", image: "/api/placeholder/300/200", difficulty: "Hard" },
+    { title: "Firewall Fighter", image: "/api/placeholder/300/200", difficulty:
