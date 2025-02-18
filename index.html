@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Cyber Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"> <img src="assets/ccg.png" alt="CCG Logo"> Cool Cyber Games</div>
+        <div class="nav-links">
+            <button onclick="changePage('home')">Home</button>
+            <button onclick="changePage('games')">Games</button>
+            <button onclick="changePage('dashboard')">Dashboard</button>
+        </div>
+    </nav>
+    
+    <main id="content">
+        <section id="home" class="page">
+            <h1>Welcome to Cool Cyber Games</h1>
+            <p>Embark on an epic journey through cybersecurity challenges.</p>
+            <button class="start-btn">Start Here</button>
+        </section>
+
+        <section id="leaderboard" class="page hidden">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+        </section>
+
+        <section id="challenges" class="page hidden">
+            <h2>Daily Challenges</h2>
+            <ul id="challenge-list"></ul>
+        </section>
+
+        <section id="games" class="page hidden">
+            <h2>Featured Games</h2>
+            <div id="game-gallery" class="game-slider"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Cool Cyber Games. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
