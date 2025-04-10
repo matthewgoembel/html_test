@@ -247,9 +247,8 @@ body {
 /* ======================= GAME DISPLAYS ======================= */
 /* ----- Featured Games Grid ----- */
 /* ADD: Navy background for featured section */
-/* ADD: Navy background for featured section */
 .navy-bg {
-    background-color: #0a192f; /* Navy blue color */
+    background-color: 00474a; /* Navy blue color */
     padding: 4rem 5%;
     margin: 0 -2rem; /* Extend beyond container */
     width: calc(100% + 4rem);
