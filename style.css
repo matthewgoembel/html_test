@@ -149,9 +149,12 @@ body {
 }
 
 .welcome-description {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+
+  max-width: 900px;         /* Limits line width */
+  text-align: center;       /* Optional: Center the text itself */
 }
 
 /*ADD  */
