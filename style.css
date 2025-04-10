@@ -285,6 +285,58 @@ body {
 /********************************
   Angled Section Content
 *********************************/
+.cyber-section {
+  background: #0a192f;
+  color: #E0E0E0;
+  padding: 4rem 0;
+}
+
+.cyber-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.cyber-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.cyber-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.cyber-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #00D8FF;
+}
+
+.cyber-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cyber-image {
+  flex: 1;
+  max-width: 400px;
+  width: 100%;
+}
+
+.cyber-divider {
+  height: 4px;
+  background: linear-gradient(to right, #00ffcc, #0088ff);
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
 .angled-section-inner {
   max-width: 1200px;
   margin: 0 auto;
