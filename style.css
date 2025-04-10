@@ -320,6 +320,7 @@ body {
 .game-info h3 {
     margin-bottom: 0.5rem;
     color: #0ff;
+    z-index: 1;
 }
 
 /* ----- Games Page Grid ----- */
