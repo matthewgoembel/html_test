@@ -56,10 +56,11 @@ body {
 
 /* ----- Auth & Account Dropdown ----- */
 .auth-section {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto; /* Pins it to the right side */
 }
 
 .account-dropdown {
