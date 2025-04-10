@@ -173,6 +173,20 @@ body {
     color: transparent;
 }
 
+.gradient-flow {
+  background: linear-gradient(to right, #00ffcc, #0088ff, #00ffcc);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-flow 3s linear infinite;
+}
+
+@keyframes gradient-flow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
 .start-button {
     background: linear-gradient(45deg, #00ffcc, #0088ff);
     border-radius: 40px;
