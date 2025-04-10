@@ -266,7 +266,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    min-height: 400px;
+    min-height: 300px;
 }
 
 .featured-game-item {
@@ -377,6 +377,7 @@ body {
 
 /* ADD: Glowing line */
 .glow-line {
+    align-items: center;
     height: 3px;
     background: linear-gradient(90deg, transparent, #0ff, transparent);
     margin-bottom: 2rem;
