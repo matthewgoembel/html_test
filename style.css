@@ -408,7 +408,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background-color: #2c2c2c;
+    background-color: transparent;
     text-decoration: none;
     /* Remove or comment out any aspect-ratio or fixed heights here */
 }
