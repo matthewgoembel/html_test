@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard | Cool Cyber Games</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    body {
+      background-color: #0a192f;
+      color: #E0E0E0;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+    }
+
+    .dashboard-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dashboard-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background-color: #112240;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 2px solid #00D8FF33;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .user-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #00D8FF;
+      object-fit: cover;
+    }
+
+    .profile-info h2 {
+      margin: 0;
+      color: #00D8FF;
+    }
+
+    .edit-profile-btn {
+      background: #00D8FF;
+      color: #121212;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .edit-profile-btn:hover {
+      background: #00bfff;
+    }
+
+    .section {
+      margin-top: 3rem;
+    }
+
+    .section h3 {
+      color: #00D8FF;
+      border-bottom: 2px solid #00D8FF;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: #112240;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #00D8FF33;
+      box-shadow: 0 0 10px #00D8FF22;
+    }
+
+    .achievements-list, .progress-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .achievements-list li, .progress-list li {
+      padding: 0.75rem;
+      background: #112240;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      border-left: 4px solid #00D8FF;
+      box-shadow: 0 0 5px #00D8FF22;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <div class="user-profile">
+        <img src="https://via.placeholder.com/80" alt="Avatar" class="user-avatar" />
+        <div class="profile-info">
+          <h2>Username</h2>
+          <p>Email: user@example.com</p>
+        </div>
+      </div>
+      <button class="edit-profile-btn">Edit Profile</button>
+    </div>
+
+    <div class="section">
+      <h3>Account Overview</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>Total XP</h4>
+          <p>13,450</p>
+        </div>
+        <div class="stat-card">
+          <h4>Completed Challenges</h4>
+          <p>42</p>
+        </div>
+        <div class="stat-card">
+          <h4>Rank</h4>
+          <p>Cyber Defender</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Achievements</h3>
+      <ul class="achievements-list">
+        <li>First Login - Welcome to Cool Cyber Games!</li>
+        <li>Malware Maze Master - Finished all levels</li>
+        <li>Password Champion - Scored 100% on quiz</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Learning Progress</h3>
+      <ul class="progress-list">
+        <li>Malware Maze: <strong>Completed</strong></li>
+        <li>Master the Password: <strong>In Progress</strong></li>
+        <li>Web Quest: <strong>Not Started</strong></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
