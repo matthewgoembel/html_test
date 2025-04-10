@@ -28,6 +28,7 @@ body {
     gap: 0.5rem;
     text-decoration: none;
     color: #00D8FF;
+    font-weight: bold;
 }
 
 /* ----- Links & Interaction ----- */
@@ -108,11 +109,12 @@ body {
     background-color: #00D8FF;
     color: #1E1E1E;
     padding: 10px 20px;
-     border-radius: 40px;
+    border-radius: 40px;
     text-decoration: none;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .login-button:hover {
@@ -140,7 +142,7 @@ body {
 }
 
 .welcome-title {
-    font-size: 3.5rem;
+    font-size: 5.5rem;
     text-shadow: 0 0 10px rgba(0,255,255,0.5);
     margin-bottom: 1rem;
 }
