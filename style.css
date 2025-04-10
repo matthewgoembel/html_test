@@ -20,10 +20,9 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
-
 .navbar-brand {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -34,10 +33,11 @@ body {
 
 /* ----- Links & Interaction ----- */
 .navbar-links {
+    flex: 1;                  /* Expands to fill leftover space */
     display: flex;
     gap: 2rem;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;  /* Centers them within this space */
 }
 
 .nav-link {
@@ -63,10 +63,10 @@ body {
 }
 
 .account-dropdown {
-    position: relative;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     cursor: pointer;
 }
 
