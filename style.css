@@ -59,7 +59,7 @@ body {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
   margin-left: auto; /* Pins it to the right side */
 }
 
