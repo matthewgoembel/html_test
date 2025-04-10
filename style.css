@@ -245,6 +245,74 @@ body {
     white-space: pre-wrap;
 }
 
+/********************************
+  Angled Section
+*********************************/
+.angled-section {
+  position: relative;
+  background: #0a192f;  /* Matches your navy-blue theme */
+  color: #E0E0E0;
+  padding: 4rem 2rem;   /* Spacing around content */
+  overflow: hidden;     /* Ensures hidden angled pseudo-element doesn’t scroll horizontally */
+}
+
+/* Creates a diagonal “divider” effect at the top */
+.angled-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;  
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #0a192f;  /* Same color, or a darker/lighter variation */
+  transform: skewY(-4deg);
+  transform-origin: 0;
+}
+
+/* If you want a second angled divider at the bottom, add ::after similarly */
+.angled-section::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #0a192f;
+  transform: skewY(4deg);
+  transform-origin: 100%;
+}
+
+/********************************
+  Angled Section Content
+*********************************/
+.angled-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;    /* Center everything by default */
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.section-text {
+  max-width: 600px;      /* Keep text narrower for readability */
+  margin: 0 auto 2rem;   /* Auto left/right to center, 2rem bottom for spacing */
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* Images below headings */
+.section-image {
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+
 /* ======================= GAME DISPLAYS ======================= */
 /* ----- Featured Games Grid ----- */
 /* ADD: Navy background for featured section */
