@@ -437,7 +437,7 @@ body {
 .featured-game-title {
     position: relative;
     padding: 10px 15px;
-    background: #1e1e1e;
+    background: transparent;
     color: #E0E0E0;
     font-size: 1.2rem;
     font-weight: bold;
