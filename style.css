@@ -16,30 +16,30 @@ body {
 }
 
 .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* separates left, center, and right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .navbar-brand {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: #00D8FF;
-    font-weight: bold;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #00D8FF;
+  font-weight: bold;
 }
 
-/* ----- Links & Interaction ----- */
 .navbar-links {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+  flex: 1;
+  display: flex;
+  justify-content: center; /* ✨ Center links */
+  gap: 2rem;
 }
+
 .nav-link {
     color: #E0E0E0;
     text-decoration: none;
@@ -56,9 +56,9 @@ body {
 
 /* ----- Auth & Account Dropdown ----- */
 .auth-section {
-    flex: 0 0 auto;
-    margin-left: auto;
+    flex: 1;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 10px;
 }
