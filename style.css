@@ -20,7 +20,9 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* separates left, center, and right */
 }
+
 .navbar-brand {
     flex: 0 0 auto;
     display: flex;
@@ -33,13 +35,11 @@ body {
 
 /* ----- Links & Interaction ----- */
 .navbar-links {
-    flex: 1;                  /* Expands to fill leftover space */
+    flex: 1;
     display: flex;
+    justify-content: center;
     gap: 2rem;
-    align-items: center;
-    justify-content: center;  /* Centers them within this space */
 }
-
 .nav-link {
     color: #E0E0E0;
     text-decoration: none;
@@ -56,11 +56,11 @@ body {
 
 /* ----- Auth & Account Dropdown ----- */
 .auth-section {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-left: auto; /* Pins it to the right side */
+    flex: 0 0 auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .account-dropdown {
