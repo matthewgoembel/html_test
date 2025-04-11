@@ -14,37 +14,22 @@
     }
 
     .dashboard-container {
-      display: grid;
-      grid-template-columns: 1fr 3fr;
-      gap: 2rem;
-      max-width: 100%;
-    }
-
-    .sidebar {
-      background-color: #112240;
-      border-radius: 12px;
-      padding: 1.5rem;
-      border: 2px solid #00D8FF33;
-      box-shadow: 0 0 10px #00D8FF22;
-      height: fit-content;
-    }
-
-    .main-panel {
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .main-panel-section {
+    .panel {
       background-color: #112240;
-      padding: 1.5rem;
       border-radius: 12px;
+      padding: 1.5rem;
       border: 2px solid #00D8FF33;
       box-shadow: 0 0 10px #00D8FF22;
-      width: 100%;
     }
 
-    .main-panel-section h3 {
+    .panel h3 {
       color: #00D8FF;
       border-bottom: 2px solid #00D8FF;
       padding-bottom: 0.5rem;
@@ -67,7 +52,9 @@
     }
 
     .user-profile {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
 
     .user-avatar {
@@ -76,7 +63,6 @@
       border-radius: 50%;
       border: 3px solid #00D8FF;
       object-fit: cover;
-      margin-bottom: 1rem;
     }
 
     .profile-info h2 {
@@ -146,53 +132,53 @@
   </nav>
 
   <div class="dashboard-container">
-    <div class="sidebar">
+    <div class="panel">
       <div class="user-profile">
         <img src="https://via.placeholder.com/100" alt="Avatar" class="user-avatar" />
-        <div class="profile-info">
-          <h2>Username</h2>
-          <p>Email: user@example.com</p>
+        <div>
+          <div class="profile-info">
+            <h2>John Cyber</h2>
+            <p>Email: jcybes123@coolcybergames.com</p>
+          </div>
+          <button class="edit-profile-btn">Edit Profile</button>
         </div>
-        <button class="edit-profile-btn">Edit Profile</button>
       </div>
     </div>
 
-    <div class="main-panel">
-      <div class="main-panel-section">
-        <h3>Account Overview</h3>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <h4>Total XP</h4>
-            <p>13,450</p>
-          </div>
-          <div class="stat-card">
-            <h4>Completed Challenges</h4>
-            <p>42</p>
-          </div>
-          <div class="stat-card">
-            <h4>Rank</h4>
-            <p>Cyber Defender</p>
-          </div>
+    <div class="panel">
+      <h3>Account Overview</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>Total XP</h4>
+          <p>13,450</p>
+        </div>
+        <div class="stat-card">
+          <h4>Completed Challenges</h4>
+          <p>42</p>
+        </div>
+        <div class="stat-card">
+          <h4>Rank</h4>
+          <p>Cyber Defender</p>
         </div>
       </div>
+    </div>
 
-      <div class="main-panel-section">
-        <h3>Achievements</h3>
-        <ul class="achievements-list">
-          <li>First Login - Welcome to Cool Cyber Games!</li>
-          <li>Malware Maze Master - Finished all levels</li>
-          <li>Password Champion - Scored 100% on quiz</li>
-        </ul>
-      </div>
+    <div class="panel">
+      <h3>Achievements</h3>
+      <ul class="achievements-list">
+        <li>First Login - Welcome to Cool Cyber Games!</li>
+        <li>Malware Maze Master - Finished all levels</li>
+        <li>Password Champion - Scored 100% on quiz</li>
+      </ul>
+    </div>
 
-      <div class="main-panel-section">
-        <h3>Learning Progress</h3>
-        <ul class="progress-list">
-          <li>Malware Maze: <progress value="100" max="100"></progress> Completed</li>
-          <li>Master the Password: <progress value="60" max="100"></progress> In Progress</li>
-          <li>Web Quest: <progress value="0" max="100"></progress> Not Started</li>
-        </ul>
-      </div>
+    <div class="panel">
+      <h3>Learning Progress</h3>
+      <ul class="progress-list">
+        <li>Malware Maze: <progress value="100" max="100"></progress> Completed</li>
+        <li>Master the Password: <progress value="60" max="100"></progress> In Progress</li>
+        <li>Web Quest: <progress value="0" max="100"></progress> Not Started</li>
+      </ul>
     </div>
   </div>
 </body>
