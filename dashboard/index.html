@@ -17,7 +17,7 @@
       max-width: 1300px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 3fr;
       gap: 2rem;
     }
 
@@ -63,8 +63,18 @@
       background: #00bfff;
     }
 
+    .main-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
     .main-panel-section {
-      margin-bottom: 2rem;
+      background-color: #112240;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 2px solid #00D8FF33;
+      box-shadow: 0 0 10px #00D8FF22;
     }
 
     .main-panel-section h3 {
@@ -74,16 +84,10 @@
       margin-bottom: 1rem;
     }
 
-    .full-width {
-      width: 100%;
-      margin-bottom: 1.5rem;
-    }
-
     .stats-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.5rem;
-      text-align: center;
     }
 
     .stat-card {
@@ -92,6 +96,7 @@
       border-radius: 10px;
       border: 1px solid #00D8FF33;
       box-shadow: 0 0 10px #00D8FF22;
+      text-align: center;
     }
 
     .achievements-list, .progress-list {
@@ -154,20 +159,18 @@
     <div class="main-panel">
       <div class="main-panel-section">
         <h3>Account Overview</h3>
-        <div class="stat-card full-width">
-          <div class="stats-grid">
-            <div>
-              <h4>Total XP</h4>
-              <p>13,450</p>
-            </div>
-            <div>
-              <h4>Completed Challenges</h4>
-              <p>42</p>
-            </div>
-            <div>
-              <h4>Rank</h4>
-              <p>Cyber Defender</p>
-            </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h4>Total XP</h4>
+            <p>13,450</p>
+          </div>
+          <div class="stat-card">
+            <h4>Completed Challenges</h4>
+            <p>42</p>
+          </div>
+          <div class="stat-card">
+            <h4>Rank</h4>
+            <p>Cyber Defender</p>
           </div>
         </div>
       </div>
