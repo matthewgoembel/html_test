@@ -14,19 +14,56 @@
     }
 
     .dashboard-container {
-      max-width: 1300px;
-      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 3fr;
       gap: 2rem;
+      max-width: 100%;
     }
 
-    .sidebar, .main-panel {
+    .sidebar {
       background-color: #112240;
       border-radius: 12px;
       padding: 1.5rem;
       border: 2px solid #00D8FF33;
       box-shadow: 0 0 10px #00D8FF22;
+      height: fit-content;
+    }
+
+    .main-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .main-panel-section {
+      background-color: #112240;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 2px solid #00D8FF33;
+      box-shadow: 0 0 10px #00D8FF22;
+      width: 100%;
+    }
+
+    .main-panel-section h3 {
+      color: #00D8FF;
+      border-bottom: 2px solid #00D8FF;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: #0d2039;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #00D8FF33;
+      box-shadow: 0 0 10px #00D8FF22;
+      text-align: center;
     }
 
     .user-profile {
@@ -61,42 +98,6 @@
 
     .edit-profile-btn:hover {
       background: #00bfff;
-    }
-
-    .main-panel {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .main-panel-section {
-      background-color: #112240;
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 2px solid #00D8FF33;
-      box-shadow: 0 0 10px #00D8FF22;
-    }
-
-    .main-panel-section h3 {
-      color: #00D8FF;
-      border-bottom: 2px solid #00D8FF;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .stat-card {
-      background: #0d2039;
-      padding: 1.5rem;
-      border-radius: 10px;
-      border: 1px solid #00D8FF33;
-      box-shadow: 0 0 10px #00D8FF22;
-      text-align: center;
     }
 
     .achievements-list, .progress-list {
