@@ -175,6 +175,31 @@
       border-radius: 10px;
       box-shadow: 0 0 5px #00D8FF;
     }
+
+    /* Blur & Overlay */
+    .coming-soon-container {
+      filter: blur(5px);
+      pointer-events: none;
+      user-select: none;
+      position: relative;
+    }
+
+    .coming-soon-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      background-color: rgba(10, 25, 47, 0.95);
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      text-align: center;
+      color: #00ffe0;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ffe0;
+      box-shadow: 0 0 20px rgba(0, 255, 224, 0.3);
+    }
   </style>
 </head>
 <body>
@@ -206,62 +231,66 @@
     </div>
   </nav>
 
-  <div class="dashboard-container">
-    <div class="panel">
-      <h3>Profile</h3>
-      <div class="profile-grid">
-        <div class="user-profile">
-          <img src="https://via.placeholder.com/100" alt="Avatar" class="user-avatar" />
-          <div class="profile-info">
-            <h2>Username</h2>
-            <p>Email: user@example.com</p>
+  <div class="coming-soon-overlay">🚧 Coming Soon 🚧</div>
+
+  <div class="coming-soon-container">
+    <div class="dashboard-container">
+      <div class="panel">
+        <h3>Profile</h3>
+        <div class="profile-grid">
+          <div class="user-profile">
+            <img src="https://via.placeholder.com/100" alt="Avatar" class="user-avatar" />
+            <div class="profile-info">
+              <h2>Username</h2>
+              <p>Email: user@example.com</p>
+            </div>
+            <button class="edit-profile-btn">Edit Profile</button>
           </div>
-          <button class="edit-profile-btn">Edit Profile</button>
-        </div>
-        <div class="badge-section">
-          <h4>Badges</h4>
-          <div class="badge-grid">
-            <div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div>
-            <div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div>
+          <div class="badge-section">
+            <h4>Badges</h4>
+            <div class="badge-grid">
+              <div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div>
+              <div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="panel">
-      <h3>Account Overview</h3>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <h4>Total XP</h4>
-          <p>13,450</p>
-        </div>
-        <div class="stat-card">
-          <h4>Completed Challenges</h4>
-          <p>42</p>
-        </div>
-        <div class="stat-card">
-          <h4>Rank</h4>
-          <p>Cyber Defender</p>
+      <div class="panel">
+        <h3>Account Overview</h3>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h4>Total XP</h4>
+            <p>13,450</p>
+          </div>
+          <div class="stat-card">
+            <h4>Completed Challenges</h4>
+            <p>42</p>
+          </div>
+          <div class="stat-card">
+            <h4>Rank</h4>
+            <p>Cyber Defender</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="panel">
-      <h3>Achievements</h3>
-      <ul class="achievements-list">
-        <li>First Login - Welcome to Cool Cyber Games!</li>
-        <li>Malware Maze Master - Finished all levels</li>
-        <li>Password Champion - Scored 100% on quiz</li>
-      </ul>
-    </div>
+      <div class="panel">
+        <h3>Achievements</h3>
+        <ul class="achievements-list">
+          <li>First Login - Welcome to Cool Cyber Games!</li>
+          <li>Malware Maze Master - Finished all levels</li>
+          <li>Password Champion - Scored 100% on quiz</li>
+        </ul>
+      </div>
 
-    <div class="panel">
-      <h3>Learning Progress</h3>
-      <ul class="progress-list">
-        <li>Malware Maze: <progress value="100" max="100"></progress> Completed</li>
-        <li>Master the Password: <progress value="60" max="100"></progress> In Progress</li>
-        <li>Web Quest: <progress value="0" max="100"></progress> Not Started</li>
-      </ul>
+      <div class="panel">
+        <h3>Learning Progress</h3>
+        <ul class="progress-list">
+          <li>Malware Maze: <progress value="100" max="100"></progress> Completed</li>
+          <li>Master the Password: <progress value="60" max="100"></progress> In Progress</li>
+          <li>Web Quest: <progress value="0" max="100"></progress> Not Started</li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
