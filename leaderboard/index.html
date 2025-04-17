@@ -102,6 +102,31 @@
       color: #FF6900;
       font-weight: bold;
     }
+
+    /* Blur & Overlay */
+    .coming-soon-container {
+      filter: blur(5px);
+      pointer-events: none;
+      user-select: none;
+      position: relative;
+    }
+
+    .coming-soon-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      background-color: rgba(10, 25, 47, 0.95);
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      text-align: center;
+      color: #00ffe0;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ffe0;
+      box-shadow: 0 0 20px rgba(0, 255, 224, 0.3);
+    }
   </style>
 </head>
 <body>
@@ -123,75 +148,78 @@
     </div>
   </nav>
 
-  <div class="leaderboard-container">
-    <h1 class="leaderboard-title">LEADERBOARD</h1>
-    <p class="leaderboard-subtext">Climb the ranks by solving challenges, completing games, and mastering cybersecurity skills.</p>
+  <h1 class="leaderboard-title">LEADERBOARD</h1>
+  <div class="coming-soon-overlay">🚧 Leaderboard Coming Soon 🚧</div>
 
-    <div class="top-three">
-      <div class="podium">
-        <img src="../avatars/avatar2.png" alt="Top 2">
-        <h4>[2] shadowfox</h4>
-        <div class="volume-label">1,650 XP</div>
+  <div class="coming-soon-container">
+    <div class="leaderboard-container">
+      <p class="leaderboard-subtext">Climb the ranks by solving challenges, completing games, and mastering cybersecurity skills.</p>
+
+      <div class="top-three">
+        <div class="podium">
+          <img src="../avatars/avatar2.png" alt="Top 2">
+          <h4>[2] shadowfox</h4>
+          <div class="volume-label">1,650 XP</div>
+        </div>
+        <div class="podium" style="transform: scale(1.1);">
+          <img src="../avatars/avatar1.png" alt="Top 1">
+          <h4 class="rank-highlight">[1] cyberking</h4>
+          <div class="volume-label">1,820 XP</div>
+        </div>
+        <div class="podium">
+          <img src="../avatars/avatar3.png" alt="Top 3">
+          <h4>[3] malwaremaestro</h4>
+          <div class="volume-label">1,540 XP</div>
+        </div>
       </div>
-      <div class="podium" style="transform: scale(1.1);">
-        <img src="../avatars/avatar1.png" alt="Top 1">
-        <h4 class="rank-highlight">[1] cyberking</h4>
-        <div class="volume-label">1,820 XP</div>
-      </div>
-      <div class="podium">
-        <img src="../avatars/avatar3.png" alt="Top 3">
-        <h4>[3] malwaremaestro</h4>
-        <div class="volume-label">1,540 XP</div>
-      </div>
+
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>XP</th>
+            <th>Challenges</th>
+            <th>Games Completed</th>
+            <th>Accuracy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Unranked</td>
+            <td class="you">You</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0%</td>
+          </tr>
+          <tr>
+            <td class="rank-highlight">[1]</td>
+            <td>cyberking</td>
+            <td>1820</td>
+            <td>55</td>
+            <td>4</td>
+            <td>98%</td>
+          </tr>
+          <tr>
+            <td>[2]</td>
+            <td>shadowfox</td>
+            <td>1650</td>
+            <td>48</td>
+            <td>3</td>
+            <td>95%</td>
+          </tr>
+          <tr>
+            <td>[3]</td>
+            <td>malwaremaestro</td>
+            <td>1540</td>
+            <td>40</td>
+            <td>1</td>
+            <td>93%</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-    <table class="leaderboard-table">
-      <thead>
-        <tr>
-          <th>Rank</th>
-          <th>Player</th>
-          <th>XP</th>
-          <th>Challenges</th>
-          <th>Games Completed</th>
-          <th>Accuracy</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Unranked</td>
-          <td class="you">You</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0%</td>
-        </tr>
-        <tr>
-          <td class="rank-highlight">[1]</td>
-          <td>cyberking</td>
-          <td>1820</td>
-          <td>55</td>
-          <td>4</td>
-          <td>98%</td>
-        </tr>
-        <tr>
-          <td>[2]</td>
-          <td>shadowfox</td>
-          <td>1650</td>
-          <td>48</td>
-          <td>3</td>
-          <td>95%</td>
-        </tr>
-        <tr>
-          <td>[3]</td>
-          <td>malwaremaestro</td>
-          <td>1540</td>
-          <td>40</td>
-          <td>1</td>
-          <td>93%</td>
-        </tr>
-        <!-- Add more players as needed -->
-      </tbody>
-    </table>
   </div>
 </body>
 </html>
